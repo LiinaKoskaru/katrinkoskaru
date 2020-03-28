@@ -69,6 +69,7 @@ body {
   transition: all .2s;
   position: relative;
   font-size: 14px;
+  background-color: #C9007E;
 }
 
 .btn:hover {
