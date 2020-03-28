@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.background {
+  /* The image used */
+  background-image: url(../images/ursula.jpg);
+  /* Full height */
+  height: 100vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 30px;
+  display: block;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 8px;
+  transition: all .2s;
+  position: relative;
+  font-size: 14px;
+}
+
+.btn:hover {
+  transform: rotate(10deg);
+}
+
+.btn-white {
+  background-color: #000;
+  color: #fff;
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+  .heading-primary {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  .btn:link,
+  .btn:visited {
+    display: inline-block;
+    padding: 4px 5px;
+  }
+
+}
